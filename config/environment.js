@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'playground',
+    modulePrefix: 'ember-playground',
     environment,
     rootURL: '/',
     locationType: 'history',
