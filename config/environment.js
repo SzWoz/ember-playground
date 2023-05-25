@@ -19,6 +19,11 @@ module.exports = function (environment) {
       // when it is created
     },
   };
+  ENV['ember-google-maps'] = {
+    key: 'AIzaSyCcnzshzmKpzMOb2R699rKDPo2pAHRWB-k',
+    language: 'en',
+    region: 'US',
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

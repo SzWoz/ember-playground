@@ -1,0 +1,31 @@
+<input
+  type="text"
+  placeholder="Type in address"
+  {{on "input" this.updateAddress}}
+/>
+<button {{on "click" this.createMarkerFromAddress}}>Create Marker from Address</button>
+
+<GMap
+  @lat={{this.latitude}}
+  @lng={{this.longitude}}
+  @zoom={{this.zoom}}
+  @onClick={{this.createMarkerFromMap}}
+  @mapTypeId="hybrid"
+  @disableDefaultUI={{true}}
+  @styles={{this.mapStyles}}
+  @key={{this.markers.length}}
+  as |map|
+>
+  {{#each this.markers as |location|}}
+    <map.marker
+      @lat={{location.lat}}
+      @lng={{location.lng}}
+      @draggable={{false}}
+      @onclick={{this.removeMarker}}
+    />
+  {{/each}}
+</GMap>
+
+<style>
+  .ember-google-map { width: 800px; height: 800px; }
+</style>
