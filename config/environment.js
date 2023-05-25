@@ -4,7 +4,7 @@ module.exports = function (environment) {
   const ENV = {
     modulePrefix: 'ember-playground',
     environment,
-    rootURL: '/',
+    rootURL: '/ember-playground',
     locationType: 'history',
     EmberENV: {
       EXTEND_PROTOTYPES: false,
